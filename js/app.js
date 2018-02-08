@@ -132,3 +132,4 @@ function answer7() {
 answer7();
 
 alert('You have answered ' + score + ' out of 7 questions correct!');
+//delete this
