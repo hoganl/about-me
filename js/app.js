@@ -120,4 +120,4 @@ while (turns > 0 && correct === false) {
     }
 }
 
-alert('You have answered ' + score + ' questions correct!');
+alert('You have answered ' + score + ' out of 7 questions correct!');
