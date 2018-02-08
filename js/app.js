@@ -66,48 +66,54 @@ if (answer5 === 'no' || answer5 === 'n'){
   alert('Shoot, you must have not entered a proper response. I will give you the answer any way. I do not have any kids.');
 }
 
-var x = 3;
-var turns = 4;
+function answer6() {
+  var myNum = 3;
+  var turns = 4;
 
-while (turns > 0) {
-  var answer6 = parseInt (prompt('What is my favorite number?'));
-  console.log(userName + ' thinks ' + answer6 + ' is my favotite number.');
-  if (answer6 === x) {
-    alert(userName + ', you are correct!');
-    score++;
-    break;
-  } else if (answer6 < x) {
-    alert(userName + ', you are too low.');
-  } else {
-    alert(userName + ', you are too high.');
-  } 
-  turns--
-  if (turns === 0){
-    alert('Sorry, you are out of guesses. It was 3');
-  }
-}
-
-var lacysStates = ['florida', 'california', 'north carolina', 'alabama', 'texas'];
-var turns = 6
-var correct = false
-
-while (turns > 0 && correct === false) {
-  var answer7 = prompt('Can you guess a state that I have visited besides Washington?').toLowerCase().trim();
-  console.log(userName + ' thinks I have visited ' + answer7 + '.');
-  for (var i = 0; i < lacysStates.length; i++){
-    if (answer7 === lacysStates[i]) {
-      alert(userName + ', alright, you guessed one right!');
-      correct = true;
+  while (turns > 0) {
+    var answer6 = parseInt (prompt('What is my favorite number?'));
+    console.log(userName + ' thinks ' + answer6 + ' is my favotite number.');
+    if (answer6 === myNum) {
+      alert(userName + ', you are correct!');
       score++;
+      break;
+    } else if (answer6 < myNum) {
+      alert(userName + ', you are too low.');
+    } else {
+      alert(userName + ', you are too high.');
+    } 
+    turns--
+    if (turns === 0){
+      alert('Sorry, you are out of guesses. It was 3');
     }
   }
-  if (correct === false) {
-    alert(userName + ', sorry, I have not been to that state.');
-  }
-  turns--
-  if (correct === true || turns === 0) {
+}
+answer6();
+
+function answer7() {
+  var lacysStates = ['florida', 'california', 'north carolina', 'alabama', 'texas'];
+  var turns = 6;
+  var correct = false;
+
+  while (turns > 0 && correct === false) {
+    var answer7 = prompt('Can you guess a state that I have visited besides Washington?').toLowerCase().trim();
+    console.log(userName + ' thinks I have visited ' + answer7 + '.');
+    for (var i = 0; i < lacysStates.length; i++){
+      if (answer7 === lacysStates[i]) {
+        alert(userName + ', alright, you guessed one right!');
+        correct = true;
+        score++;
+      }
+    }
+    if (correct === false) {
+      alert(userName + ', sorry, I have not been to that state.');
+    }
+    turns--;
+    if (correct === true || turns === 0) {
       alert('The states that I have visited besides Washington are: Florida, California, North Carolina, Alsabama, and Texas');
+    }
   }
 }
+answer7();
 
 alert('You have answered ' + score + ' out of 7 questions correct!');
