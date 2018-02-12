@@ -86,7 +86,7 @@ function answer6() {
   var turns = 4;
 
   while (turns > 0) {
-    var answer6 = parseInt (prompt('What is my favorite number?'));
+    var answer6 = parseInt (prompt('For this next questions, you will have to try and guess what is my favorite number is? You will have 4 tries to guess it. Happy guessing!'));
     console.log(userName + ' thinks ' + answer6 + ' is my favotite number.');
     if (answer6 === myNum) {
       alert(userName + ', you are correct!');
@@ -111,7 +111,7 @@ function answer7() {
   var correct = false
 
   while (turns > 0 && correct === false) {
-    var answer7 = prompt('Can you guess a state that I have visited besides Washington?').toLowerCase().trim();
+    var answer7 = prompt('For my last question, can you guess a state that I have visited besides Washington?').toLowerCase().trim();
     console.log(userName + ' thinks I have visited ' + answer7 + '.');
     for (var i = 0; i < lacysStates.length; i++){
       if (answer7 === lacysStates[i]) {
